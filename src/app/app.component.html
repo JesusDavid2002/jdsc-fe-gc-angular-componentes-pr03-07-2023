@@ -3,11 +3,11 @@
 <router-outlet></router-outlet>
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col my-3">
       <h1>Administración de artículos</h1>
     </div>
   </div>
-  <div class="row">
+  <div class="row my-2">
     <app-listado-articulos [datosArticulos]="datosArticulos" (seleccionarDato)="recibirDatoSeleccionado($event)"></app-listado-articulos>
   </div>
   <div class="row">
