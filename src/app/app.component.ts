@@ -14,6 +14,7 @@ export class AppComponent {
   datosArticulos: any = []
   datoSeleccionado: any;
 
+  // Recogemos los datos del vector y los metemos en el array
   agregarDatos(){
       let articuloNuevo = {
       'codigo': this.codigo,
@@ -26,6 +27,8 @@ export class AppComponent {
     this.precio= '';
   }
 
+  // Recogeremos el array hasta llegar a la posición del objeto a modificar y utilizando los inputs actualizamos la descripcion y el precio
+  // Si se cambia el codigo o el codigo no esta en la tabla se creara una instancia.
   modificarDatos(){
     let datoEnTabla = false; 
 
@@ -37,12 +40,12 @@ export class AppComponent {
         break; 
       }
     }
-  
     if (!datoEnTabla) {
       this.agregarDatos(); 
     }
   }
 
+  // Recogemos el dato seleccionado al pulsar el boton Seleccionar y rellenamos los inputs con esos datos
   recibirDatoSeleccionado(dato:any){
     this.datoSeleccionado = dato;
     this.codigo = this.datoSeleccionado.codigo;

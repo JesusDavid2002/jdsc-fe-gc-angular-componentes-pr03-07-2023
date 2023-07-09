@@ -6,10 +6,12 @@
         <th>Borrar</th>
         <th>Seleccionar</th>
     </tr>
+    <!-- Utilizamos el ngFor para recorrer todas las posiciones del array -->
     <tr *ngFor="let datos of datosArticulos" class="text-center">
         <td>{{datos.codigo}}</td>
         <td>{{datos.descripcion}}</td>
         <td>{{datos.precio}}</td>
+        <!-- Utilizamos los botones para eliminar objetos y seleccionarlos -->
         <td><div class="btn btn-danger" (click)="borrarArticulo(datos.codigo)">Borrar</div></td>
         <td><div class="btn btn-success" (click)="seleccionarArticulo(datos)">Seleccionar</div></td>
     </tr>

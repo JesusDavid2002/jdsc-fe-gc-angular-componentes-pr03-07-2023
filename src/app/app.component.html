@@ -7,6 +7,8 @@
       <h1>Administración de artículos</h1>
     </div>
   </div>
+  <!-- Pasamos los datos del array al componente hijo
+  Esta a la espera de activar el evento del boton Seleccionar -->
   <div class="row my-2">
     <app-listado-articulos [datosArticulos]="datosArticulos" (seleccionarDato)="recibirDatoSeleccionado($event)"></app-listado-articulos>
   </div>
@@ -15,6 +17,7 @@
       <p>Código: <input type="text" id="codigo" [(ngModel)]="codigo"></p>
       <p>Descripción: <input type="text" id="descripcion" [(ngModel)]="descripcion"></p>
       <p>Precio: <input type="text" id="precio" [(ngModel)]="precio"></p>
+      <!-- Utilizamos los botones para crear objetos y/o modificarlos -->
       <div class="btn btn-secondary mx-3" (click)="agregarDatos()">Agregar</div>
       <div class="btn btn-secondary mx-3" (click)="modificarDatos()">Modificar</div>
     </div>
