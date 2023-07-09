@@ -1,0 +1,16 @@
+<table class="table" border="2">
+    <tr class="text-center">
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Borrar</th>
+        <th>Seleccionar</th>
+    </tr>
+    <tr *ngFor="let datos of datosArticulos" class="text-center">
+        <td>{{datos.codigo}}</td>
+        <td>{{datos.descripcion}}</td>
+        <td>{{datos.precio}}</td>
+        <td><div class="btn btn-danger" (click)="borrarArticulo(datos.codigo)">Borrar</div></td>
+        <td><div class="btn btn-success" (click)="seleccionarArticulo(datos)">Seleccionar</div></td>
+    </tr>
+</table>
